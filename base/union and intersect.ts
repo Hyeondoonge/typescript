@@ -18,7 +18,7 @@ console.log('Union test-------------------*');
 printId(user_id1);
 printId(user_id2);
 
-// Intersect 예제
+// Intersect + Union 예제
 // base 타입을 정의하고 이를 확장하여 사용할 수 있다.
 // 아래와 같이 재사용되는 타입을 정의할 때 사용가능하다.
 
@@ -30,6 +30,11 @@ const dog: Animal = { id: 1, name: '뭉치', age: 3 };
 const sofa: Furniture = { id: 2, name: '안락한 소파', price: 150000 };
 
 function printObject(object: Animal | Furniture) {
+  console.log('타입을 모르는 상황에서 두 타입 사이의 공통된 속성에 접근가능하다. ');
+  console.log(object.id, object.name);
+
+  // object.age => Property 'age' does not exist on type 'Animal | Furniture'.
+
   if ('age' in object) {
     console.log('동물의 이름은 ', object.name, ' 나이는 ', object.age);
   } else {
@@ -37,6 +42,6 @@ function printObject(object: Animal | Furniture) {
   }
 }
 
-console.log('Intersect test-------------------*');
+console.log('Intersect + Union test-------------------*');
 printObject(dog);
 printObject(sofa);
