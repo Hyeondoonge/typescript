@@ -21,7 +21,7 @@ export interface LeafNode<T> extends GraphNode<T> {
   parent: number;
 }
 
-// 2. 새로운 속성 추가 (선언 병합)
+// 2. 선언 병합을 이용한 새로운 속성 추가
 // 선언병합? 같은 이름으로 선언된 두 개의 개별적인 선언을
 // 하나로 합치는 것. => 두 선언의 기능을 모두 갖게됨
 
@@ -53,4 +53,9 @@ export interface User {
 export type MyFunc = (param: string) => void;
 export type SaleState = 'sale' | 'sold'
 
-// 4. 에러 메시지
+// ⭐️ Conclusion
+// interface는 선언 병합할 수 있다.
+// type은 프리미티브타입, 유니언타입까지에도 타입을 지정할 수 있다.
+
+// 선언 병합이 필요하지 않는 경우에는 type을 사용하다가
+// 필요한 경우 (ex. 선언 병합)에 인터페이스를 사용한다.
