@@ -1,0 +1,107 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    /* ✓ Type Checking */
+    // "allowUnusedLabels": true,                        /* 사용되지 않는 label(like object literal의 속성)에 대한 에러 */
+    // "allowUnreachableCode": true,                     /* 실행될리 없는 코드 조각에 대한 에러 */
+    // "alwaysStrict": true,                             /* 모든 파일에 대해 use strict 모드 */
+    // "exactOptionalPropertyTypes": true,               /* optional property에 undined 할당 불가능. 그럴려면 직접 타입이 지정되어야함 */
+    // "noFallthroughCasesInSwitch": true,               /* 특정 case문이 break, return, throw을 통해 끝나야함, 다음 cast문으로 fall throught 될 수 없음! */
+    "noImplicitAny": true /* 지정되지 않은 type에 대해 (추론할 수 없는 경우) 암묵적으로 any 타입 설정 */,
+    // "noImplicitOverride": true,                       /* override로서 선언된 기능만 오버라이딩 될 수 있도록 선언 */
+    // "noImplicitReturns": true,                        /* 추론할 수 없는 return 타입이 암묵적으로 추론될 수 없도록 함 */
+    // "noImplicitThis": true,                           /* this타입이 any로 추론되지 못하도록 함. */
+    // ⛔️ "noPropertyAccessFromIndexSignature": true,       /* unknown key에 dot를 이용한 접근 미허용 => 속성의 존재 여부를 표시할 수 있음 */
+    // "noUncheckedIndexedAccess": true,                 /* 인덱싱 시그니처 결과로, 선언되지 않는 속성 접근할 경우 undefined타입 값을 리턴하지 않음. (무조건 인덱스 타입에서 지정한 value 타입) */
+    // "noUnusedLocals": true,                           /* 접근되지 않는 지역 변수 선언에 대한 에러 리포팅 */
+    // "noUnusedParameters": true,                       /* 접근되지 않는 매개 변수 선언에 대한 에러 리포팅 */
+    "strict": true /* 타입 체킹을 강화 -> 서비스 타입 안정성 강화됨 */,
+    // "strictBindCallApply": true,                      /* bind, call, apply함수 호출 시 타입 체킹 */
+    // "strictFunctionTypes": true,                      /* 함수 파라미터 타입 체킹을 더 정학하게 함 */
+    // "strictNullChecks": true,                         /* 타입체크시 null과 undefined를 명확히 명시함. */
+    // "strictPropertyInitialization": true /* 선언된 class 속성에 대해, 생성자 안에서 초기화 되도록 함. */,
+    // "useUnknownInCatchVariables": true,               /* catch 내 변수를 unknown으로 지정 -> 후에 유연하게 타입 변경가능하도록 하기 위함 */
+
+    /* Language and Environment */
+    "target": "es6" /* target js 문법 버전, lib는 target에 의존함. */,
+    // "lib": ["ES2015"], /* 사용하는 API들의 타입이 정의된 라이브러리, ex ["ES6", "ES2019.Array"] */
+    // "emitDecoratorMetadata": true,                    /* 데코레이터 설정 관련 - 1 */
+    // "experimentalDecorators": true,                   /* 데코레이터 설정 관련 - 2*/
+
+    // jsx 구조가 자바스크립트에서 어떤 형식으로 컴파일될지에 관한 것  (react or react-jsx)
+    // "jsx": "preserve" /* jsx: preserve => ts단에서 컴파일 X */,
+    // "jsxFactory": "",                                 /* Specify the JSX factory function used when targeting React JSX emit, e.g. 'React.createElement' or 'h' */
+    // "jsxFragmentFactory": "",                         /* Specify the JSX Fragment reference used for fragments when targeting React JSX emit e.g. 'React.Fragment' or 'Fragment'. */
+    // "jsxImportSource": "",                            /* Specify module specifier used to import the JSX factory functions when using `jsx: react-jsx*`.` */
+    // "reactNamespace": "",                             /* Specify the object invoked for `createElement`. This only applies when targeting `react` JSX emit. */
+
+    // "noLib": true,                                    /* lib사용을 제한함 */
+    // "useDefineForClassFields": true,                  /* 클래스 사용과 관련된 속성 */
+
+    /* Modules */
+    // "allowUmdGlobalAccess": true /* Allow accessing UMD globals from modules. */,
+    // "noResolve": true,                                /* Disallow `import`s, `require`s or `<reference>`s from expanding the number of files TypeScript should add to a project. */
+    // "baseUrl": "./",                                  /* 베이스 경로 지정 -> "./"은 tsconfig 경로를 기준으로 함 */
+    // "paths": {},                                      /* 베이스 경로를 alias을 이용해 지정함(baseurl 설정돼있다면 그걸 기중느로), 여러 entry 입력 가능 */
+    /* alias를 보고 ts가 해석만하고 변환하지 않음 */
+    // "module": "ES2015" /* 모듈 시스템 */,
+    // "moduleResolution": "node",                       /* module을 어떻게 해석할 것인지에 대한 것 */
+    // "resolveJsonModule": true,                        /* json 파일 import 허용  */
+
+    // "rootDir": "./",                                  /* Specify the root folder within your source files. */
+    // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
+    // "typeRoots": [],                                  /* Specify multiple folders that act like `./node_modules/@types`. */
+    // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
+
+    /* JavaScript Support */
+    // "allowJs": true,                                  /* js 파일이 있는 것 허용 */
+    // "checkJs": true,                                  /* js 에러 리포팅 */
+    // "maxNodeModuleJsDepth": 1,                        /* 검사할 node_modules 폴더 최대 뎁스 */
+
+    /* Interop Constraints */
+    // "allowSyntheticDefaultImports": true,             /* default export 없을 시 'import as x from y' -> 'import x from y' 해석 허용*/
+    "esModuleInterop": true /* es6를 CommonJS 모듈 시스템과 독자적으로 것인지. true시 allowSyntheticDefaultImports도 함께 자동 설정됨 */,
+    /* false시 default없을 때 문제 발생할 수 있음*/
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    "isolatedModules": true /* Ensure that each file can be safely transpiled without relying on other imports. */
+    // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
+
+    /* Completeness */
+    // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
+    // "skipLibCheck": true /* 선언 파일의 타입 체킹을 건너뜀 */
+
+    /* Projects */
+    // "incremental": true,                              /* Enable incremental compilation */
+    // "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
+    // "tsBuildInfoFile": "./",                          /* Specify the folder for .tsbuildinfo incremental compilation files. */
+    // "disableSourceOfProjectReferenceRedirect": true,  /* Disable preferring source files instead of declaration files when referencing composite projects */
+    // "disableSolutionSearching": true,                 /* Opt a project out of multi-project reference checking when editing. */
+    // "disableReferencedProjectLoad": true,             /* Reduce the number of projects loaded automatically by TypeScript. */
+
+    /* Emit */
+    // "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    // "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
+    // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
+    // "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
+    // "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output. */
+    // "outDir": "./",                                   /* Specify an output folder for all emitted files. */
+    // "removeComments": true,                           /* Disable emitting comments. */
+    // "noEmit": true,                                   /* Disable emitting files from a compilation. */
+    // "importHelpers": true,                            /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
+    // "importsNotUsedAsValues": "remove",               /* Specify emit/checking behavior for imports that are only used for types */
+    // "downlevelIteration": true,                       /* Emit more compliant, but verbose and less performant JavaScript for iteration. */
+    // "sourceRoot": "",                                 /* Specify the root path for debuggers to find the reference source code. */
+    // "mapRoot": "",                                    /* Specify the location where debugger should locate map files instead of generated locations. */
+    // "inlineSourceMap": true,                          /* Include sourcemap files inside the emitted JavaScript. */
+    // "inlineSources": true,                            /* Include source code in the sourcemaps inside the emitted JavaScript. */
+    // "emitBOM": true,                                  /* Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files. */
+    // "newLine": "crlf",                                /* Set the newline character for emitting files. */
+    // "stripInternal": true,                            /* Disable emitting declarations that have `@internal` in their JSDoc comments. */
+    // "noEmitHelpers": true,                            /* Disable generating custom helper functions like `__extends` in compiled output. */
+    // "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
+    // "preserveConstEnums": true,                       /* Disable erasing `const enum` declarations in generated code. */
+    // "declarationDir": "./",                           /* Specify the output directory for generated declaration files. */
+    // "preserveValueImports": true,                     /* Preserve unused imported values in the JavaScript output that would otherwise be removed. */
+  }
+}
