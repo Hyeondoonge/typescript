@@ -1,19 +1,19 @@
-class Point {
+interface Point {
+  x: number;
+  y: number;
+}
+
+class Character implements Point {
   x: number;
   y: number;
 
   constructor(x = 0, y = 0) {
-    this.x = x;
+    this.x = y;
     this.y = y;
-  }
-
-  print() {
-    console.log('My Point');
-    console.log(`x: ${this.x}, y: ${this.y}`);
   }
 }
 
-class Horse extends Point {
+class Horse extends Character {
   name: string;
 
   constructor(name = 'no name') {
