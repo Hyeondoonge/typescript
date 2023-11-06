@@ -24,4 +24,14 @@ type M = keyof Mapish; // string | number
 
 const map: Mapish = { 0: false, '1': false, name: false };
 
+// 3. 활용해보기
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  // K는 T 객체가 가지는 key들의 유니온 타입
+  return obj[key];
+}
+const ME = { name: '현정', age: 23 };
+console.log(getProperty(ME, 'name'));
+console.log(getProperty(ME, 'height'));
+// Argument of type `height` is not assignable to parameter of type `name | age`
+
 export {};
