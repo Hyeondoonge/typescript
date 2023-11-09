@@ -1,0 +1,11 @@
+// object, array 내부의 값들을 literal 값으로서 지정
+// readonly의 성격을 가지게됨
+
+// * const 변수로 선언하는 경우와의 차이는 참조타입에 관한 불변성도 지킨다는 것이다.
+
+let arr = [1, 2, 3] as const; // readonly [1, 2, 3]
+arr[0] = 1; // Cannot assign to '0' because it is a read-only property.
+arr.push(4); // Property 'push' does not exist on type 'readonly [1, 2, 3]'.
+
+const p6 = { x: 1, y: 2 } as const; // readonly { x:1, y:2 }
+p6.x = 3; // Cannot assign to 'x' because it is a read-only property.
