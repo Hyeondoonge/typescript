@@ -1,0 +1,16 @@
+{
+  "name": "declaration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mylib.js",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "types": "./mylib.d.ts",
+  "dependencies": {
+    "typescript": "^5.8.3"
+  }
+}
